@@ -1,0 +1,3 @@
+npm init -y
+npm i express body-parser mongoose dotenv
+npm i --save-dev nodemon
