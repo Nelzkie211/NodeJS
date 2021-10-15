@@ -8,8 +8,14 @@ const app = express()
 
 // database
 //myFirstDatabase is your database/ if this db name not exist it will auto add new db name 
-mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.je9kg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{
-})
+
+// mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.je9kg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{
+// })
+
+//or
+mongoose.connect(`${process.env.DATABASE_URL}`)
+
+
 const db= mongoose.connection;
 db.once('open', () => {
   console.log('connected to mongo db')
