@@ -1,0 +1,8 @@
+Express, MongoDB & Google OAuth
+
+npm init -y
+
+//
+npm i express mongoose connect-mongodb-session express-session express-handlebars dotenv method-override moment morgan passport passport-google-oauth20
+
+npm i -D nodemon cross-env
